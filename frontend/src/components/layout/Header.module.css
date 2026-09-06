@@ -1,0 +1,324 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  border-bottom: 1px solid var(--color-border);
+  background: rgba(8, 8, 11, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Fixed header on mobile/tablet so menu is always reachable anywhere on the page */
+@media (max-width: 899px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.inner {
+  min-height: var(--header-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.brandMark {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 0.45rem;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.brandText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.desktopNav {
+  display: none;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.navLink {
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    background-color var(--duration-fast) var(--ease-out);
+}
+
+.navLink:hover,
+.navLinkActive {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.iconLink {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: var(--space-1);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  border: 1px solid transparent;
+}
+
+.iconLink:hover {
+  color: var(--color-text);
+  border-color: var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.iconLink[data-tooltip]:hover::after,
+.iconLink[data-tooltip]:focus-visible::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 130;
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  max-width: min(70vw, 18rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+}
+
+.menuButtonBars,
+.menuButtonBars::before,
+.menuButtonBars::after {
+  display: block;
+  width: 1.1rem;
+  height: 2px;
+  border-radius: 999px;
+  background: var(--color-text);
+  transition:
+    transform var(--duration-base) var(--ease-out),
+    opacity var(--duration-fast) var(--ease-out);
+}
+
+.menuButtonBars {
+  position: relative;
+}
+
+.menuButtonBars::before,
+.menuButtonBars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.menuButtonBars::before {
+  top: -6px;
+}
+
+.menuButtonBars::after {
+  top: 6px;
+}
+
+.menuButtonBars[data-open="true"] {
+  background: transparent;
+}
+
+.menuButtonBars[data-open="true"]::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menuButtonBars[data-open="true"]::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+.mobileBackdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 140;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    opacity var(--duration-base) var(--ease-out),
+    visibility var(--duration-base) var(--ease-out);
+}
+
+.mobileBackdropOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobilePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: auto;
+  z-index: 150;
+  width: min(20rem, calc(100vw - 2.5rem));
+  max-width: 100%;
+  height: 100dvh;
+  padding: max(var(--space-5), env(safe-area-inset-top))
+    max(var(--space-5), env(safe-area-inset-right))
+    max(var(--space-5), env(safe-area-inset-bottom))
+    var(--space-5);
+  background: var(--color-surface);
+  border-left: 1px solid var(--color-border);
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.45);
+  transform: translate3d(110%, 0, 0);
+  visibility: hidden;
+  pointer-events: none;
+  transition:
+    transform var(--duration-slow) var(--ease-out),
+    visibility var(--duration-slow) var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.mobilePanelOpen {
+  transform: translate3d(0, 0, 0);
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobilePanelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.mobileLabel {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-subtle);
+}
+
+.closeButton {
+  padding: 0.55rem 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  background: var(--color-card);
+}
+
+.mobileNav {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  font-size: var(--text-base);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.mobileLink:hover,
+.mobileLink:focus-visible {
+  border-color: var(--color-border-strong);
+  background: rgba(91, 140, 255, 0.08);
+}
+
+.mobileSocial {
+  margin-top: auto;
+  display: grid;
+  gap: var(--space-3);
+  padding-bottom: var(--space-4);
+}
+
+.mobileSocial > a {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .desktopNav {
+    display: flex;
+  }
+
+  .menuButton,
+  .mobileBackdrop,
+  .mobilePanel {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .brandText {
+    max-width: 9.5rem;
+  }
+
+  .mobilePanel {
+    width: min(100vw - 1.25rem, 20rem);
+  }
+}
+
+@media (max-width: 340px) {
+  .brandText {
+    max-width: 7.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobilePanel,
+  .mobileBackdrop,
+  .menuButtonBars,
+  .menuButtonBars::before,
+  .menuButtonBars::after {
+    transition: none;
+  }
+}
