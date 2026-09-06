@@ -1,0 +1,64 @@
+.section {
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: var(--space-16);
+  }
+}
+
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 960px) {
+  .layout {
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+}
+
+.intro {
+  padding-top: var(--space-2);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.role {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+}
+
+.card {
+  height: 100%;
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+.copy p:first-child {
+  color: var(--color-text);
+  font-weight: 600;
+}
