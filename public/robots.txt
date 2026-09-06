@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Add an absolute Sitemap URL after deploy, for example:
+# Sitemap: https://your-domain.example/sitemap.xml
