@@ -1,0 +1,38 @@
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.copy {
+  max-width: 40rem;
+}
+
+.eyebrow {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.title {
+  font-size: var(--text-3xl);
+  line-height: var(--leading-tight);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  margin-top: var(--space-3);
+  color: var(--color-text-muted);
+  max-width: 36rem;
+}
+
+.action {
+  flex-shrink: 0;
+}
