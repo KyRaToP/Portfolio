@@ -1,13 +1,12 @@
-import { assetUrl } from "@/lib/assets";
 import type { Project } from "./types";
 
 /**
  * Project data — CONTENT_LINKS.md + design_spec.md.
  * Card covers use branding cover.png, not raw screenshots.
- * Media paths are site-root (`/images/...`); assetUrl() adds Vite BASE_URL
- * (needed on GitHub Pages under /Portfolio/).
+ * Media paths use import.meta.env.BASE_URL so GitHub Pages (/Portfolio/)
+ * and Cloudflare (/) both resolve assets correctly.
  */
-const projectRecords: Project[] = [
+export const projects: Project[] = [
   {
     slug: "smart-utility",
     order: 1,
@@ -69,55 +68,55 @@ const projectRecords: Project[] = [
       github: "https://github.com/KyRaToP/Smart_Utility",
     },
     media: {
-      icon: "/icons/projects/smart-utility.png",
-      cover: "/images/projects/smart-utility/cover.png",
-      videoPoster: "/images/projects/smart-utility/video-poster.png",
-      ogImage: "/og/projects/smart-utility.png",
-      liveVideo: "/videos/projects/smart-utility/IMG_2879.MP4",
+      icon: `${import.meta.env.BASE_URL}icons/projects/smart-utility.png`,
+      cover: `${import.meta.env.BASE_URL}images/projects/smart-utility/cover.png`,
+      videoPoster: `${import.meta.env.BASE_URL}images/projects/smart-utility/video-poster.png`,
+      ogImage: `${import.meta.env.BASE_URL}og/projects/smart-utility.png`,
+      liveVideo: `${import.meta.env.BASE_URL}videos/projects/smart-utility/IMG_2879.MP4`,
       // Order follows the Smart Utility live video walkthrough.
       screenshots: [
         {
-          src: "/images/projects/smart-utility/photo_1_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_1_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — главный экран",
         },
         {
-          src: "/images/projects/smart-utility/photo_2_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_2_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — показания",
         },
         {
-          src: "/images/projects/smart-utility/photo_4_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_4_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — расчёт",
         },
         {
-          src: "/images/projects/smart-utility/photo_4_2026-08-23_03-10-59.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_4_2026-08-23_03-10-59.jpg`,
           alt: "Smart Utility — история",
         },
         {
-          src: "/images/projects/smart-utility/photo_3_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_3_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — статистика",
         },
         {
-          src: "/images/projects/smart-utility/photo_1_2026-08-23_03-10-59.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_1_2026-08-23_03-10-59.jpg`,
           alt: "Smart Utility — настройки",
         },
         {
-          src: "/images/projects/smart-utility/photo_3_2026-08-23_03-10-59.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_3_2026-08-23_03-10-59.jpg`,
           alt: "Smart Utility — уведомления",
         },
         {
-          src: "/images/projects/smart-utility/photo_2_2026-08-23_03-10-59.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_2_2026-08-23_03-10-59.jpg`,
           alt: "Smart Utility — напоминания об оплате",
         },
         {
-          src: "/images/projects/smart-utility/photo_5_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_5_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — профиль и квартиры",
         },
         {
-          src: "/images/projects/smart-utility/photo_7_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_7_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — напоминания в боте",
         },
         {
-          src: "/images/projects/smart-utility/photo_9_2026-08-23_02-55-37.jpg",
+          src: `${import.meta.env.BASE_URL}images/projects/smart-utility/photo_9_2026-08-23_02-55-37.jpg`,
           alt: "Smart Utility — очистка базы в боте",
         },
       ],
@@ -169,20 +168,20 @@ const projectRecords: Project[] = [
       github: "https://github.com/KyRaToP/Telegram_bot",
     },
     media: {
-      icon: "/icons/projects/task-planner.png",
-      cover: "/images/projects/task-planner/cover.png",
-      videoPoster: "/images/projects/task-planner/video-poster.png",
-      ogImage: "/og/projects/task-planner.png",
-      liveVideo: "/videos/projects/task-planner/video_2026-08-23_00-44-46.mp4",
+      icon: `${import.meta.env.BASE_URL}icons/projects/task-planner.png`,
+      cover: `${import.meta.env.BASE_URL}images/projects/task-planner/cover.png`,
+      videoPoster: `${import.meta.env.BASE_URL}images/projects/task-planner/video-poster.png`,
+      ogImage: `${import.meta.env.BASE_URL}og/projects/task-planner.png`,
+      liveVideo: `${import.meta.env.BASE_URL}videos/projects/task-planner/video_2026-08-23_00-44-46.mp4`,
       // Order follows the Task Planner live video walkthrough.
       screenshots: [
-        { src: "/images/projects/task-planner/1.jpg", alt: "Task Planner — главное меню" },
-        { src: "/images/projects/task-planner/3.jpg", alt: "Task Planner — создание задачи" },
-        { src: "/images/projects/task-planner/4.jpg", alt: "Task Planner — категории" },
-        { src: "/images/projects/task-planner/2.jpg", alt: "Task Planner — список задач" },
-        { src: "/images/projects/task-planner/5.jpg", alt: "Task Planner — история задач" },
-        { src: "/images/projects/task-planner/6.jpg", alt: "Task Planner — очистка задач и истории" },
-        { src: "/images/projects/task-planner/7.jpg", alt: "Task Planner — дайджест" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/1.jpg`, alt: "Task Planner — главное меню" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/3.jpg`, alt: "Task Planner — создание задачи" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/4.jpg`, alt: "Task Planner — категории" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/2.jpg`, alt: "Task Planner — список задач" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/5.jpg`, alt: "Task Planner — история задач" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/6.jpg`, alt: "Task Planner — очистка задач и истории" },
+        { src: `${import.meta.env.BASE_URL}images/projects/task-planner/7.jpg`, alt: "Task Planner — дайджест" },
       ],
     },
   },
@@ -238,42 +237,21 @@ const projectRecords: Project[] = [
       github: "https://github.com/KyRaToP/Web_event",
     },
     media: {
-      icon: "/icons/projects/web-event.png",
-      cover: "/images/projects/web-event/cover.png",
-      videoPoster: "/images/projects/web-event/video-poster.png",
-      ogImage: "/og/projects/web-event.png",
-      liveVideo: "/videos/projects/web-event/IMG_2831.MP4",
+      icon: `${import.meta.env.BASE_URL}icons/projects/web-event.png`,
+      cover: `${import.meta.env.BASE_URL}images/projects/web-event/cover.png`,
+      videoPoster: `${import.meta.env.BASE_URL}images/projects/web-event/video-poster.png`,
+      ogImage: `${import.meta.env.BASE_URL}og/projects/web-event.png`,
+      liveVideo: `${import.meta.env.BASE_URL}videos/projects/web-event/IMG_2831.MP4`,
       // Order follows the Web Event live video walkthrough.
       screenshots: [
-        { src: "/images/projects/web-event/1.jpg", alt: "Web Event — приглашение" },
-        { src: "/images/projects/web-event/2.jpg", alt: "Web Event — RSVP и подтверждение" },
-        { src: "/images/projects/web-event/3.jpg", alt: "Web Event — уведомление в Telegram" },
+        { src: `${import.meta.env.BASE_URL}images/projects/web-event/1.jpg`, alt: "Web Event — приглашение" },
+        { src: `${import.meta.env.BASE_URL}images/projects/web-event/2.jpg`, alt: "Web Event — RSVP и подтверждение" },
+        { src: `${import.meta.env.BASE_URL}images/projects/web-event/3.jpg`, alt: "Web Event — уведомление в Telegram" },
       ],
     },
   },
 ];
 
-function withBaseAssets(project: Project): Project {
-  return {
-    ...project,
-    media: {
-      ...project.media,
-      icon: assetUrl(project.media.icon),
-      cover: assetUrl(project.media.cover),
-      videoPoster: assetUrl(project.media.videoPoster),
-      ogImage: assetUrl(project.media.ogImage),
-      liveVideo: project.media.liveVideo
-        ? assetUrl(project.media.liveVideo)
-        : project.media.liveVideo,
-      screenshots: project.media.screenshots.map((image) => ({
-        ...image,
-        src: assetUrl(image.src),
-      })),
-    },
-  };
-}
-
-export const projects: Project[] = projectRecords.map(withBaseAssets);
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);

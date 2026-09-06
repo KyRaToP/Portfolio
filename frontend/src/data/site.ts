@@ -8,7 +8,7 @@ export const siteSeo = {
   projectsTitle: "Проекты — Roman Gopkalo",
   projectsDescription:
     "Реальные проекты: Telegram Mini App, automation и интерактивный web-опыт.",
-  defaultOgImage: "/og/home.png",
+  defaultOgImage: `${import.meta.env.BASE_URL}og/home.png`,
 } as const;
 
 /** Content source: CONTENT_LINKS.md (do not invent URLs). */

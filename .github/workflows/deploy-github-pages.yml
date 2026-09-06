@@ -34,9 +34,10 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      # Pass base on the CLI so Vite always prefixes assets for project Pages URL.
       - name: Build for GitHub Pages
         working-directory: frontend
-        run: npm run build
+        run: npm run build -- --base=/Portfolio/
         env:
           GITHUB_PAGES: "true"
 
