@@ -1,0 +1,201 @@
+.card {
+  display: grid;
+  gap: var(--space-5);
+  height: 100%;
+  padding: var(--space-4);
+  transition:
+    transform var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out);
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-strong);
+}
+
+.card:hover .media {
+  border-color: rgba(91, 140, 255, 0.28);
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: var(--space-5);
+    gap: var(--space-6);
+  }
+}
+
+/* Media first in DOM → cover on top for all cards on mobile */
+.media {
+  min-width: 0;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+  background:
+    radial-gradient(circle at 30% 20%, rgba(91, 140, 255, 0.14), transparent 45%),
+    var(--color-surface);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.preview .media {
+  border-radius: var(--radius-lg);
+}
+
+.featured .media,
+.showcase .media {
+  min-height: 12rem;
+  aspect-ratio: auto;
+}
+
+@media (min-width: 640px) {
+  .featured .media,
+  .showcase .media {
+    min-height: 16rem;
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  max-height: 28rem;
+  object-fit: contain;
+  object-position: center;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.preview .cover {
+  max-height: none;
+}
+
+.card:hover .cover {
+  transform: scale(1.03);
+}
+
+.copy {
+  display: grid;
+  gap: var(--space-4);
+  align-content: start;
+  min-width: 0;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.inlineIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  object-fit: cover;
+}
+
+.meta {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.category {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-text-subtle);
+  text-transform: none;
+  letter-spacing: normal;
+  font-weight: 500;
+}
+
+.title {
+  font-size: clamp(1.5rem, 3vw, 2.75rem);
+  line-height: var(--leading-tight);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.preview .title {
+  font-size: var(--text-2xl);
+}
+
+.text {
+  color: var(--color-text-muted);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: auto;
+}
+
+.actions > * {
+  flex: 1 1 9.5rem;
+}
+
+@media (min-width: 480px) {
+  .actions > * {
+    flex: 0 1 auto;
+  }
+}
+
+/* Desktop: featured / showcase become two columns; copy left, cover right */
+@media (min-width: 1024px) {
+  .featured,
+  .showcase {
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: stretch;
+    padding: var(--space-6);
+    gap: var(--space-8);
+  }
+
+  .featured .copy,
+  .showcase .copy {
+    order: 1;
+    align-content: center;
+  }
+
+  .featured .media,
+  .showcase .media {
+    order: 2;
+    min-height: 18rem;
+  }
+
+  .reverse {
+    grid-template-columns: 1.05fr 0.95fr;
+  }
+
+  .reverse .media {
+    order: 1;
+  }
+
+  .reverse .copy {
+    order: 2;
+  }
+}
+
+.preview {
+  /* Keeps variant hook for typography/layout overrides */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .cover {
+    transform: none;
+  }
+}
