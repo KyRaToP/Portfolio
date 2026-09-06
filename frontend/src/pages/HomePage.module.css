@@ -1,0 +1,10 @@
+.rest {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .rest {
+    padding-bottom: var(--space-20);
+  }
+}

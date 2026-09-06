@@ -1,0 +1,107 @@
+.root {
+  position: relative;
+  display: inline-flex;
+}
+
+.rootPanel {
+  display: block;
+  width: 100%;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-left: var(--space-1);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-muted);
+  border: 1px solid transparent;
+  background: transparent;
+}
+
+.trigger:hover,
+.trigger[aria-expanded="true"] {
+  color: var(--color-text);
+  border-color: var(--color-border);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.triggerPanel {
+  display: block;
+  width: 100%;
+  text-align: left;
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: var(--text-base);
+  padding: 0.25rem 0;
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 120;
+  min-width: 14.5rem;
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 0.2rem;
+}
+
+.menuPanel {
+  position: static;
+  min-width: 0;
+  width: 100%;
+  margin-top: var(--space-2);
+  box-shadow: none;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.item:hover,
+.item:focus-visible {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--color-border);
+}
+
+/* Custom hover label so Email (button) also shows destination like <a> status */
+.trigger[data-tooltip]:hover::after,
+.trigger[data-tooltip]:focus-visible::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  z-index: 130;
+  padding: 0.35rem 0.55rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+  max-width: min(70vw, 18rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
+.trigger[aria-expanded="true"][data-tooltip]::after {
+  display: none;
+}
