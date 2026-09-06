@@ -1,6 +1,7 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { siteContent } from "@/data/site";
+import { assetUrl } from "@/lib/assets";
 import styles from "./Header.module.css";
 
 type NavItem =
@@ -55,7 +56,7 @@ export function Header() {
         <NavLink to="/" className={styles.brand} onClick={() => setMenuOpen(false)}>
           <img
             className={styles.brandMark}
-            src="/icons/favicon.png"
+            src={assetUrl("/icons/favicon.png")}
             alt=""
             width={28}
             height={28}

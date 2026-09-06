@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/Button";
 import { siteContent } from "@/data/site";
+import { assetUrl } from "@/lib/assets";
 import styles from "./Hero.module.css";
 
 export function Hero() {
@@ -32,7 +33,7 @@ export function Hero() {
           <div className={styles.visualGlow} />
           <div className={styles.visualFrame}>
             <img
-              src="/og/home.png"
+              src={assetUrl("/og/home.png")}
               alt=""
               width={1200}
               height={630}

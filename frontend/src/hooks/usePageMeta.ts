@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { assetUrl } from "@/lib/assets";
 
 export type PageMetaInput = {
   title: string;
@@ -16,8 +17,12 @@ function toAbsoluteUrl(pathOrUrl: string): string {
     return pathOrUrl;
   }
 
-  const path = pathOrUrl.startsWith("/") ? pathOrUrl : `/${pathOrUrl}`;
-  return `${window.location.origin}${path}`;
+  const withBase = assetUrl(pathOrUrl);
+  if (/^https?:\/\//i.test(withBase)) {
+    return withBase;
+  }
+
+  return `${window.location.origin}${withBase.startsWith("/") ? withBase : `/${withBase}`}`;
 }
 
 function upsertMeta(

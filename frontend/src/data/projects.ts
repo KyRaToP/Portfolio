@@ -1,10 +1,13 @@
+import { assetUrl } from "@/lib/assets";
 import type { Project } from "./types";
 
 /**
  * Project data — CONTENT_LINKS.md + design_spec.md.
  * Card covers use branding cover.png, not raw screenshots.
+ * Media paths are site-root (`/images/...`); assetUrl() adds Vite BASE_URL
+ * (needed on GitHub Pages under /Portfolio/).
  */
-export const projects: Project[] = [
+const projectRecords: Project[] = [
   {
     slug: "smart-utility",
     order: 1,
@@ -249,6 +252,28 @@ export const projects: Project[] = [
     },
   },
 ];
+
+function withBaseAssets(project: Project): Project {
+  return {
+    ...project,
+    media: {
+      ...project.media,
+      icon: assetUrl(project.media.icon),
+      cover: assetUrl(project.media.cover),
+      videoPoster: assetUrl(project.media.videoPoster),
+      ogImage: assetUrl(project.media.ogImage),
+      liveVideo: project.media.liveVideo
+        ? assetUrl(project.media.liveVideo)
+        : project.media.liveVideo,
+      screenshots: project.media.screenshots.map((image) => ({
+        ...image,
+        src: assetUrl(image.src),
+      })),
+    },
+  };
+}
+
+export const projects: Project[] = projectRecords.map(withBaseAssets);
 
 export function getProjectBySlug(slug: string): Project | undefined {
   return projects.find((project) => project.slug === slug);
