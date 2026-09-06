@@ -1,0 +1,27 @@
+.shell {
+  min-height: 100vh;
+  min-width: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+}
+
+@media (max-width: 899px) {
+  .shell {
+    padding-top: var(--header-height);
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .shell {
+    min-height: 100dvh;
+  }
+}
+
+.pageEnter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
