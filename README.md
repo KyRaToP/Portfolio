@@ -26,11 +26,13 @@ There is **no application scheduler**. Dates and times shown on the site (for ex
 
 #### Production URL
 
-| Item | Value |
-|------|--------|
-| Website | `[HTTPS URL]` |
-| Telegram bot | **none** (contact link only: see site Contacts) |
-| Other | Source repo placeholder: `https://github.com/KyRaToP/Portfolio` |
+
+| Item         | Value                                                              |
+| ------------ | ------------------------------------------------------------------ |
+| Website      | [https://portfolio-8wn.pages.dev](https://portfolio-8wn.pages.dev) |
+| Telegram bot | **none** (contact link only: see site Contacts)                    |
+| Other        | Source repo placeholder: `https://github.com/KyRaToP/Portfolio`    |
+
 
 #### Core functions
 
@@ -51,13 +53,15 @@ SPA built with React + TypeScript + Vite. Static assets live in repo-root `publi
 
 #### Tech Stack
 
-| Layer | Stack |
-|-------|--------|
-| UI | React 19, TypeScript, Vite 7, React Router 7 |
-| API | **none** |
-| Bot | **none** |
-| Data | **none** (content in TypeScript modules under `frontend/src/data/`) |
+
+| Layer  | Stack                                                                        |
+| ------ | ---------------------------------------------------------------------------- |
+| UI     | React 19, TypeScript, Vite 7, React Router 7                                 |
+| API    | **none**                                                                     |
+| Bot    | **none**                                                                     |
+| Data   | **none** (content in TypeScript modules under `frontend/src/data/`)          |
 | Deploy | Static host (e.g. GitHub Pages / Cloudflare Pages / Netlify) — **No Docker** |
+
 
 #### Project Structure
 
@@ -85,9 +89,11 @@ Local URL: `http://localhost:5173/` (LAN: host `true`, port `5173`).
 
 This product needs **no runtime environment variables** for `npm run dev` / `npm run build`. Contact URLs live in `frontend/src/data/site.ts`. Do not commit `.env` files if you create them later.
 
-| Name | Required | Purpose |
-|------|----------|---------|
-| *(none)* | — | Static build; no app env required |
+
+| Name     | Required | Purpose                           |
+| -------- | -------- | --------------------------------- |
+| *(none)* | —        | Static build; no app env required |
+
 
 Timezone note: **MSK** for any user-facing clocks; no scheduler.
 
@@ -117,11 +123,13 @@ Public static frontend only. Never put secrets in the frontend bundle or Git. [`
 
 #### Troubleshooting
 
-| Symptom | Checks |
-|---------|--------|
-| Blank page after deploy | Correct base URL / hosting root; open browser console |
-| Images or videos 404 | Paths under `public/`; rebuild after asset changes |
-| Dev server not reachable on phone | Same Wi‑Fi; use Network URL from Vite; firewall |
+
+| Symptom                           | Checks                                                |
+| --------------------------------- | ----------------------------------------------------- |
+| Blank page after deploy           | Correct base URL / hosting root; open browser console |
+| Images or videos 404              | Paths under `public/`; rebuild after asset changes    |
+| Dev server not reachable on phone | Same Wi‑Fi; use Network URL from Vite; firewall       |
+
 
 Full matrix: [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md).
 
@@ -167,11 +175,13 @@ Leaked deploy key or host token: revoke at the provider, set a new value on the 
 
 #### URL продакшена
 
-| Наименование | Значение |
-|--------------|----------|
-| Сайт | `[HTTPS URL]` |
-| Telegram-бот | **нет** (только ссылка в Контактах) |
-| Другое | Репозиторий-заготовка: `https://github.com/KyRaToP/Portfolio` |
+
+| Наименование | Значение                                                      |
+| ------------ | ------------------------------------------------------------- |
+| Сайт         | [https://portfolio-8wn.pages.dev](https://portfolio-8wn.pages.dev) |
+| Telegram-бот | **нет** (только ссылка в Контактах)                           |
+| Другое       | Репозиторий-заготовка: `https://github.com/KyRaToP/Portfolio` |
+
 
 #### Основные функции
 
@@ -192,13 +202,15 @@ SPA на React + TypeScript + Vite. Медиа в `public/`. Backend у порт
 
 #### Стек технологий
 
-| Слой | Стек |
-|------|------|
-| UI | React 19, TypeScript, Vite 7, React Router 7 |
-| API | **нет** |
-| Bot | **нет** |
-| Данные | **нет** (контент в `frontend/src/data/`) |
+
+| Слой   | Стек                                                                            |
+| ------ | ------------------------------------------------------------------------------- |
+| UI     | React 19, TypeScript, Vite 7, React Router 7                                    |
+| API    | **нет**                                                                         |
+| Bot    | **нет**                                                                         |
+| Данные | **нет** (контент в `frontend/src/data/`)                                        |
 | Деплой | Static host (GitHub Pages / Cloudflare Pages / Netlify и т.п.) — **Docker нет** |
+
 
 #### Структура проекта
 
@@ -226,9 +238,11 @@ npm run dev
 
 Для `dev` / `build` **переменные окружения не нужны**. Контакты — в `frontend/src/data/site.ts`. Файлы `.env` не коммитить, если создадите их позже.
 
-| Имя | Обязательно | Назначение |
-|-----|-------------|------------|
-| *(нет)* | — | Static build; env приложения не требуется |
+
+| Имя     | Обязательно | Назначение                                |
+| ------- | ----------- | ----------------------------------------- |
+| *(нет)* | —           | Static build; env приложения не требуется |
+
 
 Часовой пояс: **MSK**, если на сайте есть часы; планировщика нет.
 
@@ -258,11 +272,13 @@ npm run build
 
 #### Диагностика
 
-| Симптом | Проверить |
-|---------|-----------|
-| Пустая страница после deploy | base URL / корень хостинга; console браузера |
-| 404 у картинок или видео | пути в `public/`; rebuild после смены assets |
-| Dev с телефона не открывается | та же Wi‑Fi; Network URL Vite; firewall |
+
+| Симптом                       | Проверить                                    |
+| ----------------------------- | -------------------------------------------- |
+| Пустая страница после deploy  | base URL / корень хостинга; console браузера |
+| 404 у картинок или видео      | пути в `public/`; rebuild после смены assets |
+| Dev с телефона не открывается | та же Wi‑Fi; Network URL Vite; firewall      |
+
 
 Полная матрица: [`docs/TROUBLESHOOTING.md`](docs/TROUBLESHOOTING.md).
 

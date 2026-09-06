@@ -6,11 +6,6 @@ dist/
 build/
 frontend/dist/
 
-# Environment (secrets — never commit)
-.env
-.env.*
-!.env.example
-
 # Logs & caches
 *.log
 npm-debug.log*
