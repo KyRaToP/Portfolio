@@ -1,0 +1,83 @@
+:root {
+  /* Colors — design_spec.md */
+  --color-bg: #08080b;
+  --color-surface: #101014;
+  --color-card: #15151a;
+  --color-card-elevated: #1a1a21;
+  --color-border: rgba(255, 255, 255, 0.08);
+  --color-border-strong: rgba(255, 255, 255, 0.14);
+
+  --color-text: #f4f4f5;
+  --color-text-muted: #a1a1aa;
+  --color-text-subtle: #71717a;
+
+  --color-accent: #5b8cff;
+  --color-accent-soft: rgba(91, 140, 255, 0.16);
+  --color-accent-violet: #8b7cff;
+  --color-accent-cyan: #4fd1c5;
+
+  --gradient-ambient: radial-gradient(
+      80% 60% at 20% 0%,
+      rgba(91, 140, 255, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      70% 50% at 90% 10%,
+      rgba(139, 124, 255, 0.12),
+      transparent 50%
+    );
+
+  /* Typography */
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: clamp(1.5rem, 4vw, 2.25rem);
+  --text-4xl: clamp(1.85rem, 5.5vw, 3.5rem);
+  --text-display: clamp(2.25rem, 9vw, 4.5rem);
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-normal: 1.6;
+
+  /* Spacing (8px scale) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Radius — large rounded cards */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2rem;
+
+  /* Layout */
+  --container: 72rem;
+  --container-gutter: clamp(0.75rem, 4vw, 1.25rem);
+  --header-height: 4rem;
+
+  /* Breakpoints (documentation for media queries)
+     320 / 375 / 390 / 430 / 768 / 1024 / 1280 / 1440+ */
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* Focus */
+  --focus-ring: 0 0 0 2px var(--color-bg), 0 0 0 4px var(--color-accent);
+}
