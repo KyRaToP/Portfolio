@@ -1,0 +1,29 @@
+.section {
+  margin-bottom: var(--space-12);
+}
+
+@media (min-width: 768px) {
+  .section {
+    margin-bottom: var(--space-16);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-5);
+}
+
+@media (min-width: 860px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.allLink {
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.allLink:hover {
+  text-decoration: underline;
+}
