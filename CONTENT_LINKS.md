@@ -19,15 +19,17 @@
 
 ## 0. Site & contact
 
-| Field | Value |
-|-------|--------|
-| Site language | RU |
-| Full name | Roman Smolin |
-| Role | Web Developer |
+
+| Field              | Value                                                         |
+| ------------------ | ------------------------------------------------------------- |
+| Site language      | RU                                                            |
+| Full name          | Roman Smolin                                                  |
+| Role               | Web Developer                                                 |
 | Positioning (Hero) | Есть задача — давайте сначала разберёмся, как её лучше решить |
-| GitHub profile | https://github.com/KyRaToP |
-| Telegram (contact) | https://t.me/b1ack_r0man |
-| Email (contact) | smolin_01@mail.ru |
+| GitHub profile     | [https://github.com/KyRaToP](https://github.com/KyRaToP)      |
+| Telegram (contact) | [https://t.me/b1ack_r0man](https://t.me/b1ack_r0man)          |
+| Email (contact)    | [gopkalo_01@mail.ru](mailto:gopkalo_01@mail.ru)               |
+
 
 > Telegram URL без `@` в пути: правильно `https://t.me/b1ack_r0man`, не `t.me/@...`.
 
@@ -56,7 +58,7 @@
 
 > Проверка 2026-08-26: публичный URL сейчас **404**. Если repo ещё не создан / private — поставьте `none` или сделайте repo public.
 
-**Branding assets (в архитектуре `public/`):**
+**Branding assets (в архитектуре** `public/`**):**
 
 ```text
 public/icons/favicon.png
@@ -77,6 +79,7 @@ public/images/portfolio-video-poster.png
 
 **GitHub:**  
 `https://github.com/KyRaToP/Smart_Utility`  
+
 > Проверено: публичный repo доступен (200).
 
 **Live Demo URL:** `none`
@@ -113,6 +116,7 @@ Telegram-бот для управления задачами, планирова
 
 **GitHub:**  
 `https://github.com/KyRaToP/Telegram_bot`  
+
 > Проверка 2026-08-26: публичный URL сейчас **404**. Среди public repos KyRaToP этот name не найден. Уточните верный URL или сделайте repo public.
 
 **Live Demo URL:** `none`
@@ -149,9 +153,11 @@ public/videos/projects/task-planner/video_2026-08-23_00-44-46.mp4
 
 **GitHub:**  
 `https://github.com/KyRaToP/Web_event`  
+
 > Проверено: публичный repo доступен (200).
 
 **Live Demo URL:** `none`  
+
 > Если есть публичный URL приглашения — замените на реальный HTTPS URL.
 
 **Branding / card:**
@@ -177,13 +183,15 @@ public/videos/projects/web-event/IMG_2831.MP4
 
 # GitHub Links — Quick Reference
 
-| Project | GitHub |
-|---|---|
-| Portfolio site | `https://github.com/KyRaToP/Portfolio` (сейчас 404) |
-| Smart Utility | `https://github.com/KyRaToP/Smart_Utility` (OK) |
-| Task Planner | `https://github.com/KyRaToP/Telegram_bot` (сейчас 404) |
-| Web Event | `https://github.com/KyRaToP/Web_event` (OK) |
-| Profile (Header / Contact) | `https://github.com/KyRaToP` (OK) |
+
+| Project                    | GitHub                                                 |
+| -------------------------- | ------------------------------------------------------ |
+| Portfolio site             | `https://github.com/KyRaToP/Portfolio` (сейчас 404)    |
+| Smart Utility              | `https://github.com/KyRaToP/Smart_Utility` (OK)        |
+| Task Planner               | `https://github.com/KyRaToP/Telegram_bot` (сейчас 404) |
+| Web Event                  | `https://github.com/KyRaToP/Web_event` (OK)            |
+| Profile (Header / Contact) | `https://github.com/KyRaToP` (OK)                      |
+
 
 ---
 
@@ -214,10 +222,10 @@ Route:
 
 На странице:
 
-1. Название, category, описание  
-2. Key features / technologies  
-3. Screenshot gallery (jpg в `public/images/projects/<slug>/`)  
-4. Live video + `video-poster.png`  
+1. Название, category, описание
+2. Key features / technologies
+3. Screenshot gallery (jpg в `public/images/projects/<slug>/`)
+4. Live video + `video-poster.png`
 5. Кнопка **View on GitHub**
 
 Карточка / Featured используют `cover.png` и `icons/projects/...`, **не** screenshots.
@@ -266,11 +274,13 @@ public/
 
 ### Исходные размеры (нужна web-оптимизация позже)
 
-| Тип | Размер | Куда легло |
-|-----|--------|------------|
-| Favicon / icon | 2048×2048 | `public/icons/...` |
-| OG / cover | 3840×2016 | `public/og/...` + `cover.png` |
-| Video Poster | 3840×2160 | `public/images/.../video-poster.png` |
+
+| Тип            | Размер    | Куда легло                           |
+| -------------- | --------- | ------------------------------------ |
+| Favicon / icon | 2048×2048 | `public/icons/...`                   |
+| OG / cover     | 3840×2016 | `public/og/...` + `cover.png`        |
+| Video Poster   | 3840×2160 | `public/images/.../video-poster.png` |
+
 
 ---
 
@@ -292,3 +302,4 @@ public/
 - Не класть сюда токены, пароли, API keys, значения из `.env`.
 - Не выдумывать GitHub URL.
 - Если ссылка неизвестна — оставить `[GITHUB_..._URL]` и сообщить.
+
