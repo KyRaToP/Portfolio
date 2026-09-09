@@ -4,7 +4,7 @@ import type { Project } from "./types";
  * Project data — CONTENT_LINKS.md + design_spec.md.
  * Card covers use branding cover.png, not raw screenshots.
  * Media paths use import.meta.env.BASE_URL so GitHub Pages (/Portfolio/)
- * and Cloudflare (/) both resolve assets correctly.
+ * and local root (/) both resolve assets correctly.
  */
 export const projects: Project[] = [
   {
@@ -198,7 +198,6 @@ export const projects: Project[] = [
       "CSS",
       "JavaScript",
       "GitHub Pages",
-      "Cloudflare Worker",
       "Telegram integration",
     ],
     features: [
@@ -206,7 +205,6 @@ export const projects: Project[] = [
       "Интерактивное приглашение",
       "RSVP-сценарий",
       "Уведомления в Telegram",
-      "Cloudflare Worker",
       "Защита от злоупотреблений",
     ],
     caseStudy: {
@@ -215,9 +213,9 @@ export const projects: Project[] = [
       problem:
         "Обычные приглашения в мессенджере плохо собирают ответы и быстро выглядят хаотично. Нужна отдельная страница события с подтверждением участия.",
       solution:
-        "Собран responsive invitation site. Гость открывает страницу, знакомится с деталями, подтверждает участие; Cloudflare Worker принимает RSVP и отправляет уведомление в Telegram.",
+        "Собран responsive invitation site. Гость открывает страницу, знакомится с деталями, подтверждает участие; serverless endpoint принимает RSVP и отправляет уведомление в Telegram.",
       role:
-        "Сделал frontend/UX, RSVP flow, интеграцию с Worker и Telegram notify, подготовку к статическому publish.",
+        "Сделал frontend/UX, RSVP flow, интеграцию с serverless endpoint и Telegram notify, подготовку к статическому publish.",
       workflow: [
         "Открыть приглашение",
         "Изучить детали события",
@@ -227,7 +225,7 @@ export const projects: Project[] = [
       ],
       challenges: [
         "Сделать mobile-first опыт без перегруза анимациями.",
-        "Связать статическую страницу с Worker без лишней инфраструктуры.",
+        "Связать статическую страницу с RSVP endpoint без лишней инфраструктуры.",
         "Добавить anti-abuse меры на публичный RSVP endpoint.",
       ],
       outcome:

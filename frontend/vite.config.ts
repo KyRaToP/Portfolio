@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 import { fileURLToPath, URL } from "node:url";
 
 // GitHub Pages project site: https://KyRaToP.github.io/Portfolio/
-// Cloudflare Pages stays on domain root — leave GITHUB_PAGES unset there.
+// Local / other root hosts: leave GITHUB_PAGES unset (base = "/").
 const githubPages = process.env.GITHUB_PAGES === "true";
 
 // Assets live in the repo-root public/ folder (icons, og, covers, videos).

@@ -1,6 +1,6 @@
 /**
  * Prefix a site-root asset path with Vite `BASE_URL`.
- * Local / Cloudflare: BASE_URL = "/"
+ * Local / root host: BASE_URL = "/"
  * GitHub Pages: BASE_URL = "/Portfolio/"
  */
 export function assetUrl(path: string): string {

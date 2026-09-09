@@ -259,7 +259,6 @@ Core technologies:
 -   CSS
 -   JavaScript
 -   GitHub Pages
--   Cloudflare Worker
 -   Telegram integration
 
 Main strengths to communicate:
@@ -269,7 +268,6 @@ Main strengths to communicate:
 -   RSVP flow.
 -   Telegram notifications.
 -   Client-side interaction.
--   Cloudflare Worker.
 -   Security / anti-abuse measures.
 -   Deployment.
 
@@ -760,7 +758,6 @@ Suggested groups:
 -   Git
 -   GitHub
 -   Docker
--   Cloudflare
 -   Railway
 
 Only list technologies actually used or genuinely available for client

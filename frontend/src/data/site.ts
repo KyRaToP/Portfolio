@@ -67,7 +67,6 @@ export const techStack = {
     "Git",
     "GitHub",
     "Docker",
-    "Cloudflare",
     "Railway",
   ],
 } as const;

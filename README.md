@@ -29,7 +29,7 @@ There is **no application scheduler**. Dates and times shown on the site (for ex
 
 | Item         | Value                                                              |
 | ------------ | ------------------------------------------------------------------ |
-| Website      | [https://portfolio-8wn.pages.dev](https://portfolio-8wn.pages.dev) |
+| Website      | [https://KyRaToP.github.io/Portfolio/](https://KyRaToP.github.io/Portfolio/) |
 | Telegram bot | **none** (contact link only: see site Contacts)                    |
 | Other        | Source repo placeholder: `https://github.com/KyRaToP/Portfolio`    |
 
@@ -60,7 +60,7 @@ SPA built with React + TypeScript + Vite. Static assets live in repo-root `publi
 | API    | **none**                                                                     |
 | Bot    | **none**                                                                     |
 | Data   | **none** (content in TypeScript modules under `frontend/src/data/`)          |
-| Deploy | Static host (e.g. GitHub Pages / Cloudflare Pages / Netlify) — **No Docker** |
+| Deploy | GitHub Pages (GitHub Actions) — **No Docker** |
 
 
 #### Project Structure
@@ -178,7 +178,7 @@ Leaked deploy key or host token: revoke at the provider, set a new value on the 
 
 | Наименование | Значение                                                      |
 | ------------ | ------------------------------------------------------------- |
-| Сайт         | [https://portfolio-8wn.pages.dev](https://portfolio-8wn.pages.dev) |
+| Сайт         | [https://KyRaToP.github.io/Portfolio/](https://KyRaToP.github.io/Portfolio/) |
 | Telegram-бот | **нет** (только ссылка в Контактах)                           |
 | Другое       | Репозиторий-заготовка: `https://github.com/KyRaToP/Portfolio` |
 
@@ -209,7 +209,7 @@ SPA на React + TypeScript + Vite. Медиа в `public/`. Backend у порт
 | API    | **нет**                                                                         |
 | Bot    | **нет**                                                                         |
 | Данные | **нет** (контент в `frontend/src/data/`)                                        |
-| Деплой | Static host (GitHub Pages / Cloudflare Pages / Netlify и т.п.) — **Docker нет** |
+| Деплой | GitHub Pages (GitHub Actions) — **Docker нет** |
 
 
 #### Структура проекта

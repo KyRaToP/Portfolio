@@ -2,9 +2,11 @@
 
 **Language:** [English](#english) · [Русский](#русский)
 
+<a id="english"></a>
+
 ## Target
 
-**Cloudflare Pages** (static Vite SPA). Production URL: [https://portfolio-8wn.pages.dev](https://portfolio-8wn.pages.dev)
+**GitHub Pages** (static Vite SPA). Production URL: [https://KyRaToP.github.io/Portfolio/](https://KyRaToP.github.io/Portfolio/)
 
 ## Environment
 
@@ -16,27 +18,25 @@ No application environment variables are required. Never commit secret values.
 | *(none)* | —        |
 
 
-## Process (Cloudflare Pages + Git)
+## Process (GitHub Pages + Actions)
 
-Use **Pages**, not **Workers**.
+Deploy is automated by [`.github/workflows/deploy-github-pages.yml`](../.github/workflows/deploy-github-pages.yml).
 
-1. Dashboard → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
-2. Authorize GitHub and select `KyRaToP/Portfolio`.
-3. **Set up builds and deployments:**
+1. Repo **Settings** → **Pages** → **Source**: **GitHub Actions** (not “Deploy from a branch”).
+2. Push to `main` (or run the workflow manually via **Actions** → **Deploy GitHub Pages** → **Run workflow**).
+3. Build runs in `frontend/` with `GITHUB_PAGES=true` so Vite `base` is `/Portfolio/`.
+4. Confirm the live site and deep SPA routes (`/Portfolio/projects/...`).
 
+Manual local check:
 
-| Field                            | Value            |
-| -------------------------------- | ---------------- |
-| Project name                     | e.g. `portfolio` |
-| Production branch                | `main`           |
-| Framework preset                 | Vite (or None)   |
-| Root directory (advanced) → Path | `frontend`       |
-| Build command                    | `npm run build`  |
-| Build output directory           | `dist`           |
+```bash
+cd frontend
+set GITHUB_PAGES=true
+npm run build
+npm run preview
+```
 
-
-1. Do **not** use a screen with **Deploy command** `npx wrangler deploy` — that is a **Worker** flow.
-2. Select **Save and Deploy**. Confirm SPA routes (`/projects/...`) work (`public/_redirects` must be on `main`).
+(On Unix: `GITHUB_PAGES=true npm run build`.)
 
 ## Docker
 
@@ -44,13 +44,15 @@ Use **Pages**, not **Workers**.
 
 ## Related
 
-`[ARCHITECTURE.md](ARCHITECTURE.md)` · `[TROUBLESHOOTING.md](TROUBLESHOOTING.md)`
+[`ARCHITECTURE.md`](ARCHITECTURE.md) · [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md)
 
 ---
 
+<a id="русский"></a>
+
 ## Цель
 
-**Cloudflare Pages** (static Vite SPA). URL продакшена: [https://portfolio-8wn.pages.dev](https://portfolio-8wn.pages.dev).
+**GitHub Pages** (static Vite SPA). URL продакшена: [https://KyRaToP.github.io/Portfolio/](https://KyRaToP.github.io/Portfolio/).
 
 ## Окружение
 
@@ -62,27 +64,25 @@ Use **Pages**, not **Workers**.
 | *(нет)*    | —           |
 
 
-## Процесс (Cloudflare Pages + Git)
+## Процесс (GitHub Pages + Actions)
 
-Нужен именно **Pages**, не **Workers**.
+Деплой автоматический через [`.github/workflows/deploy-github-pages.yml`](../.github/workflows/deploy-github-pages.yml).
 
-1. Dashboard → **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**.
-2. Авторизовать GitHub и выбрать `KyRaToP/Portfolio`.
-3. **Set up builds and deployments:**
+1. Репозиторий → **Settings** → **Pages** → **Source**: **GitHub Actions** (не “Deploy from a branch”).
+2. Push в `main` (или вручную: **Actions** → **Deploy GitHub Pages** → **Run workflow**).
+3. Build в `frontend/` с `GITHUB_PAGES=true`, чтобы Vite `base` был `/Portfolio/`.
+4. Проверить сайт и SPA-маршруты (`/Portfolio/projects/...`).
 
+Локальная проверка:
 
-| Поле                             | Значение             |
-| -------------------------------- | -------------------- |
-| Project name                     | например `portfolio` |
-| Production branch                | `main`               |
-| Framework preset                 | Vite (или None)      |
-| Root directory (advanced) → Path | `frontend`           |
-| Build command                    | `npm run build`      |
-| Build output directory           | `dist`               |
+```bash
+cd frontend
+set GITHUB_PAGES=true
+npm run build
+npm run preview
+```
 
-
-1. **Не** использовать экран с **Deploy command** `npx wrangler deploy` — это поток **Worker**.
-2. **Save and Deploy**. Проверить SPA-маршруты (`public/_redirects` должен быть в `main`).
+(На Unix: `GITHUB_PAGES=true npm run build`.)
 
 ## Docker
 
@@ -90,4 +90,4 @@ Use **Pages**, not **Workers**.
 
 ## Связанные docs
 
-`[ARCHITECTURE.md](ARCHITECTURE.md)` · `[TROUBLESHOOTING.md](TROUBLESHOOTING.md)`
+[`ARCHITECTURE.md`](ARCHITECTURE.md) · [`TROUBLESHOOTING.md`](TROUBLESHOOTING.md)

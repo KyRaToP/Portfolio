@@ -1,5 +1,4 @@
-# Free GitHub Pages deploy (alternative URL if *.pages.dev is blocked).
-# Cloudflare Pages keeps using base "/" (GITHUB_PAGES unset).
+# Deploy static Vite SPA to GitHub Pages (base /Portfolio/).
 name: Deploy GitHub Pages
 
 on:
