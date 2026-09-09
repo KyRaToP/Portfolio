@@ -29,7 +29,7 @@ export const siteContent: SiteContent = {
     githubProfile: "https://github.com/KyRaToP",
     telegram: "https://t.me/b1ack_r0man",
     // Plain address only — mailto: is built in UI via toMailto()
-    email: "smolin_01@mail.ru",
+    email: "gopkalo_01@mail.ru",
     // Empty repo without commits may 404 until first push.
     portfolioRepo: "https://github.com/KyRaToP/Portfolio",
   },
