@@ -22,12 +22,12 @@
 | Field | Value |
 |-------|--------|
 | Site language | RU |
-| Full name | Roman Gopkalo |
+| Full name | Roman Smolin |
 | Role | Web Developer |
 | Positioning (Hero) | Есть задача — давайте сначала разберёмся, как её лучше решить |
 | GitHub profile | https://github.com/KyRaToP |
 | Telegram (contact) | https://t.me/b1ack_r0man |
-| Email (contact) | gopkalo_01@mail.ru |
+| Email (contact) | smolin_01@mail.ru |
 
 > Telegram URL без `@` в пути: правильно `https://t.me/b1ack_r0man`, не `t.me/@...`.
 
@@ -49,7 +49,7 @@
 
 ## 1. Portfolio (сайт)
 
-**Название:** Roman Gopkalo — Web Developer
+**Название:** Roman Smolin — Web Developer
 
 **GitHub (репозиторий самого портфолио):**  
 `https://github.com/KyRaToP/Portfolio`

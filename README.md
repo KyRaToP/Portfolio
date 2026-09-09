@@ -1,6 +1,6 @@
-# Roman Gopkalo — Portfolio
+# Roman Smolin — Portfolio
 
-Static personal portfolio website for **Roman Gopkalo** (Web Developer). It presents selected work, case studies, and contact channels. It is **not** a SaaS product, payment app, Telegram bot, or backend API.
+Static personal portfolio website for **Roman Smolin** (Web Developer). It presents selected work, case studies, and contact channels. It is **not** a SaaS product, payment app, Telegram bot, or backend API.
 
 [English](#english) · [Русский](#русский)
 
@@ -163,7 +163,7 @@ Leaked deploy key or host token: revoke at the provider, set a new value on the 
 
 #### Что это
 
-**Публичный** сайт-портфолио веб-разработчика Roman Gopkalo. Посетитель смотрит проекты (Smart Utility, Task Planner, Web Event), case study со скриншотами и видео, пишет через email, Telegram или GitHub.
+**Публичный** сайт-портфолио веб-разработчика Roman Smolin. Посетитель смотрит проекты (Smart Utility, Task Planner, Web Event), case study со скриншотами и видео, пишет через email, Telegram или GitHub.
 
 **Планировщика приложения нет.** Где на сайте важны дата/время — ориентир **московское время (MSK, UTC+3)**.
 

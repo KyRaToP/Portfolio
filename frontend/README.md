@@ -1,6 +1,6 @@
 # Frontend — Portfolio website
 
-React + TypeScript + Vite SPA for Roman Gopkalo portfolio.
+React + TypeScript + Vite SPA for Roman Smolin portfolio.
 
 ## Stack
 

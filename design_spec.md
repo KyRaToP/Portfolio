@@ -152,7 +152,7 @@ The following decisions are approved and must be respected.
 
 The portfolio should position the developer as:
 
-**Roman Gopkalo --- Web Developer**
+**Roman Smolin --- Web Developer**
 
 Suggested positioning:
 
@@ -365,7 +365,7 @@ The Hero must immediately answer:
 
 Recommended content:
 
-**ROMAN GOPKALO**
+**ROMAN SMOLIN**
 
 **WEB DEVELOPER**
 
@@ -1469,7 +1469,7 @@ Final recommended composition:
 
 ``` text
 ┌───────────────────────────────────────────────────┐
-│ ROMAN GOPKALO                     WORK ABOUT ...  │
+│ ROMAN SMOLIN                     WORK ABOUT ...  │
 ├───────────────────────────────────────────────────┤
 │                                                   │
 │  WEB DEVELOPER                     ABSTRACT /     │

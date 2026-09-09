@@ -2,10 +2,10 @@ import type { SiteContent } from "./types";
 
 /** Default SEO copy for Home and shared social previews. */
 export const siteSeo = {
-  homeTitle: "Roman Gopkalo — Web Developer",
+  homeTitle: "Roman Smolin — Web Developer",
   homeDescription:
-    "Roman Gopkalo — Web Developer. Сайты, web-приложения и Telegram-решения.",
-  projectsTitle: "Проекты — Roman Gopkalo",
+    "Roman Smolin — Web Developer. Сайты, web-приложения и Telegram-решения.",
+  projectsTitle: "Проекты — Roman Smolin",
   projectsDescription:
     "Реальные проекты: Telegram Mini App, automation и интерактивный web-опыт.",
   defaultOgImage: `${import.meta.env.BASE_URL}og/home.png`,
@@ -14,7 +14,7 @@ export const siteSeo = {
 /** Content source: CONTENT_LINKS.md (do not invent URLs). */
 export const siteContent: SiteContent = {
   language: "RU",
-  fullName: "Roman Gopkalo",
+  fullName: "Roman Smolin",
   role: "Веб-разработчик",
   positioning:
     "Есть задача — давайте сначала разберёмся, как её лучше решить",
@@ -29,7 +29,7 @@ export const siteContent: SiteContent = {
     githubProfile: "https://github.com/KyRaToP",
     telegram: "https://t.me/b1ack_r0man",
     // Plain address only — mailto: is built in UI via toMailto()
-    email: "gopkalo_01@mail.ru",
+    email: "smolin_01@mail.ru",
     // Empty repo without commits may 404 until first push.
     portfolioRepo: "https://github.com/KyRaToP/Portfolio",
   },
